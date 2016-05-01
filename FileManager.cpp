@@ -117,7 +117,7 @@ void FileManager::saveSettingsToFile() throw(FileWriteException)
    
   num_settings = setting_.getVectorLen();
   
-  writefile.open("/usr/syno/etc/poisonconvert/PoisonConvert_Settings", ostream::out);
+  writefile.open("/usr/syno/etc/poisonconvert/PoisonConvert_Settings", ofstream::out);
   if (writefile.is_open() == false)
   {
     writefile.close();
@@ -166,7 +166,7 @@ int FileManager::savePreferencesToFile() throw(FileWriteException)
  
   //filename.append(".txt");
   //Try open stream
-  writefile.open(config_file.c_str(), ostream::out);
+  writefile.open(config_file.c_str(), ofstream::out);
   if (writefile.is_open() == false)
   {
     writefile.close();
